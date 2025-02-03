@@ -1,0 +1,119 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyNvhe5elD30R51IIo0PK3HE",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Moulis980/Moulis980/blob/Master/Gradient_descent\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 1,
+      "metadata": {
+        "id": "JwY0ks4wcYsF"
+      },
+      "outputs": [],
+      "source": [
+        "import numpy as np"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "x=np.array([1,2,3,4,5])\n",
+        "y=np.array([5,9,11,13,15])"
+      ],
+      "metadata": {
+        "id": "Miq8SscrccZq"
+      },
+      "execution_count": 2,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def gradient(x,y):\n",
+        "  iterations=10\n",
+        "  m_curr=b_curr=0\n",
+        "  learning_rate=0.001\n",
+        "  n=len(x)\n",
+        "  for i in range(iterations):\n",
+        "    y_pred=m_curr*x + b_curr\n",
+        "    #print(y_pred)\n",
+        "    md=-(2/n)*sum(x*(y-y_pred))\n",
+        "    #print(md)\n",
+        "    bd=-(2/n)*sum(y-y_pred)\n",
+        "    m_curr=m_curr-learning_rate*md\n",
+        "    b_curr=b_curr-learning_rate*bd\n",
+        "    print(\"m {} b {} iter {}\".format(m_curr,b_curr,i))"
+      ],
+      "metadata": {
+        "id": "PJEA7HC_ctwd"
+      },
+      "execution_count": 12,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "gradient(x,y)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "fm5AnX0Ve-lC",
+        "outputId": "a191721a-671b-4a1a-850b-6ead2586abb2"
+      },
+      "execution_count": 11,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[0 0 0 0 0]\n",
+            "-73.2\n",
+            "[0.0944 0.1676 0.2408 0.314  0.3872]\n",
+            "-71.4624\n",
+            "[0.1865808 0.3312432 0.4759056 0.620568  0.7652304]\n",
+            "-69.7659168\n",
+            "[0.27659491 0.49102322 0.70545154 0.91987986 1.13430817]\n",
+            "-68.1095774976\n",
+            "[0.36449358 0.64703147 0.92956937 1.21210726 1.49464516]\n",
+            "-66.4924322111232\n",
+            "[0.45032687 0.7993572  1.14838753 1.49741785 1.84644818]\n",
+            "-64.91355353490187\n",
+            "[0.53414365 0.94808753 1.36203141 1.77597529 2.18991917]\n",
+            "-63.37203600745215\n",
+            "[0.61599163 1.09330754 1.57062346 2.04793937 2.52525529]\n",
+            "-61.866995592232946\n",
+            "[0.69591737 1.23510029 1.7742832  2.31346611 2.85264902]\n",
+            "-60.39756917069094\n",
+            "[0.77396638 1.37354686 1.97312734 2.57270782 3.1722883 ]\n",
+            "-58.96291404730122\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
