@@ -60,11 +60,13 @@ class Moulis:
 
 <img src="https://skillicons.dev/icons?i=python,java,c,js,html,css,mysql&perline=7" />
 
-### 🤖 AI / ML
+### 🤖 AI / ML / DL
 
 <img src="https://skillicons.dev/icons?i=tensorflow,pytorch,opencv&perline=7" />
-
 <br><br>
+<img src="https://img.shields.io/badge/YOLO-00FFFF?style=for-the-badge&logoColor=black" />
+<img src="https://img.shields.io/badge/CNN-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white" />
+<img src="https://img.shields.io/badge/MBP-4B0082?style=for-the-badge" />
 
 ### 🌐 Frameworks & Tools
 
